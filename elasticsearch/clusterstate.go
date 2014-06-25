@@ -15,8 +15,8 @@ import (
 // The ClusterState struct is built to match the data structure returned
 // by the ElasticSearch Cluster Health API.
 type ClusterState struct {
-	Master string          `json:"master_node"`
-	Nodes  map[string]Node `json:"nodes"`
+	Master string           `json:"master_node"`
+	Nodes  map[string]*Node `json:"nodes"`
 }
 
 // Poll the Cluster Health API on this Node for cluster state information.

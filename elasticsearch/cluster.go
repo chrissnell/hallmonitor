@@ -11,7 +11,7 @@ import (
 )
 
 type Cluster struct {
-	Nodes map[string]Node
+	Nodes map[string]*Node
 }
 
 func (c *Cluster) GetClusterStateForAllNodes() err {
@@ -24,4 +24,8 @@ func (c *Cluster) GetClusterStateForAllNodes() err {
 	}
 }
 
-func InitializeNewCluster([]string)
+func NewCluster(nodes []string) c *Cluster {
+	for _, v := range nodes {
+		c.Nodes[v].
+	}
+}
